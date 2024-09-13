@@ -1,0 +1,47 @@
+# Arquivos binários e de compilação
+*.exe
+*.dll
+*.dcu
+*.bpl
+*.dcp
+*.map
+*.tds
+*.ocx
+*.bpi
+*.bpk
+
+# Arquivos de configuração específicos da IDE
+*.cfg
+*.dsk
+*.identcache
+*.local
+*.stat
+
+# Arquivos de backup
+*.~*
+
+# Arquivos gerados automaticamente pelo Delphi
+*.res
+*.dproj.local
+*.dproj
+*.groupproj
+*.~*
+*.tvsconfig
+
+# Diretórios de compilação
+__history/
+__recovery/
+*.drc
+*.log
+
+# Bibliotecas de terceiros ou pacotes
+*.lib
+*.obj
+*.a
+*.so
+*.o
+
+# Outros arquivos temporários
+*.tmp
+*.log
+*.temp
