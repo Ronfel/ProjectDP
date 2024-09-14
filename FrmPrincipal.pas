@@ -15,7 +15,7 @@ type
     btnAdapter: TButton;
     btnDecorator: TButton;
     btnFacade: TButton;
-    Button2: TButton;
+    btnCommand: TButton;
     Button3: TButton;
     Button4: TButton;
     Button5: TButton;
@@ -27,6 +27,7 @@ type
     procedure btnAdapterClick(Sender: TObject);
     procedure btnDecoratorClick(Sender: TObject);
     procedure btnFacadeClick(Sender: TObject);
+    procedure btnCommandClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -41,7 +42,7 @@ implementation
 uses
   uSingletonExample, uFactoryMethod, uObserverPattern,
   uStrategyPattern, uAdapterPattern, uDecoratorPattern,
-  uFacadePattern;
+  uFacadePattern, uCommandPattern;
 
 {$R *.dfm}
 
@@ -54,6 +55,22 @@ begin
   Adapter := TAdapter.Create(Adaptee);
 
   ShowMessage('Adaptado: ' + Adapter.GetData);
+end;
+
+procedure TFormPrincipal.btnCommandClick(Sender: TObject);
+var
+  Remote: TRemoteControl;
+  LightOn, LightOff: ICommand;
+begin
+  Remote := TRemoteControl.Create;
+  LightOn := TLightOnCommand.Create;
+  LightOff := TLightOffCommand.Create;
+
+  Remote.SetCommand(LightOn);
+  Remote.PressButton;
+
+  Remote.SetCommand(LightOff);
+  Remote.PressButton;
 end;
 
 procedure TFormPrincipal.btnDecoratorClick(Sender: TObject);

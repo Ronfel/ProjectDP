@@ -74,12 +74,14 @@ object FormPrincipal: TFormPrincipal
     TabOrder = 6
     OnClick = btnFacadeClick
   end
-  object Button2: TButton
+  object btnCommand: TButton
     Left = 136
     Top = 71
     Width = 75
     Height = 25
+    Caption = 'Command'
     TabOrder = 7
+    OnClick = btnCommandClick
   end
   object Button3: TButton
     Left = 136
