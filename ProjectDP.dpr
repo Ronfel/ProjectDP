@@ -2,14 +2,17 @@ program ProjectDP;
 
 uses
   Vcl.Forms,
-  FrmPrincipal in 'FrmPrincipal.pas' {Form1},
-  uSingletonExample in 'uSingletonExample.pas';
+  FrmPrincipal in 'FrmPrincipal.pas' {FormPrincipal},
+  uSingletonExample in 'uSingletonExample.pas',
+  uFactoryMethod in 'uFactoryMethod.pas',
+  uObserverPattern in 'uObserverPattern.pas',
+  uStrategyPattern in 'uStrategyPattern.pas';
 
 {$R *.res}
 
 begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
-  Application.CreateForm(TForm1, Form1);
+  Application.CreateForm(TFormPrincipal, FormPrincipal);
   Application.Run;
 end.
